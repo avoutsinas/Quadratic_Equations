@@ -81,7 +81,7 @@ while answer == R:
       print("Since a=o , we will solve this one as a primary equation!")
       x1 = -c / b
       print()
-      print(("Your chosen equation is: ["), (b), ("*x +"), (c), ("= 0]"))
+      print(("Your chosen equation is: [{0: d}x{1:+d} = 0]".format(b,c)))
       print()
       print(
           "----------------------------------------------------------------"
@@ -91,8 +91,7 @@ while answer == R:
           "----------------------------------------------------------------"
       )
   else:
-      print(("Your chosen equation is: ["), (a), ("x^2 +"), (b), ("*x +"),
-            (c), ("= 0]"))
+      print(("Your chosen equation is: [{0: d}x^2{1:+d}x{2:+d} = 0]".format(a,b,c)))
       D = b**2 - 4 * a * c
       print()
       print("Let's calculate D = b^2-4*a*c first")
@@ -113,12 +112,12 @@ while answer == R:
         print(
             "----------------------------------------------------------------"
         )
-        print(("This equation has a double solution therefore x1 = x2 ="),
+        print(("This equation has one double solution therefore x1 = x2 ="),
               (x1))
         print(
             "----------------------------------------------------------------"
         )
-      else:
+      elif D >0 :
         x1 = (-b + math.sqrt(D)) / (2 * a)
         x2 = (-b - math.sqrt(D)) / (2 * a)
         print(
@@ -177,8 +176,8 @@ while answer == R:
     plt.title('-Equation Graph-')
 
     #display plot, pause it and ask for input to continue
-    plt.plot(x,f(x),color='red',label='f(x)',linestyle='dashed',linewidth=1)
-    plt.legend() # showing legend
+    plt.plot(x,f(x),color='red',linestyle='dashed',linewidth=1)
+    plt.legend(['f(x) ={0: d}x$^{{2}}${1:+d}x{2:+d}'.format(a,b,c)],loc='upper left') # showing legend
     plt.pause(0.001)
     input("Press [enter] to continue.")
 
