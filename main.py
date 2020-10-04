@@ -61,11 +61,19 @@ while answer == R:
           break
 
   if a == 0:
-    if b == 0:
+    if b == 0 and c != 0 :
       print(
           "----------------------------------------------------------------"
       )
       print("             !This equation has no real roots!")
+      print(
+          "----------------------------------------------------------------"
+      )
+    elif b == 0 and c == 0:
+      print(
+          "----------------------------------------------------------------"
+      )
+      print("          This is equation can be solved for any xεR")
       print(
           "----------------------------------------------------------------"
       )
@@ -139,11 +147,12 @@ while answer == R:
     elif a < 0:
         x = np.linspace(-10 - abs(x1), 10 + abs(x2))
 
+    #Define the figure along with its grid size
     fig = plt.figure(num=None, figsize=(8.1,5.6))
+    #Define the axis
     ax = fig.add_subplot(1, 1, 1)
 
-    #spine placement data centered
-    
+    #spine placement data centered  
     ax.spines['left'].set_position(('data',0.0))
     ax.spines['bottom'].set_position(('data',0.0))
 
@@ -156,7 +165,7 @@ while answer == R:
         ax.set_xticks([x1])
     else:
         ax.set_xticks([x1, x2])
-
+    #Do not display number on y axis
     ax.set_yticks([])
 
     # naming the x axis
@@ -179,7 +188,7 @@ while answer == R:
   #This loop asks the user whether he/she wants to enter another equation
   while True:
       print()
-      answer = str(input("Do you want to try another equation? (Y/N): "))
+      answer = str(input("Do you want to try another equation? (Y/N): ").upper())
       if (answer != R and answer != E):
           print()
           print("!Please select Yes or No as your answer(Y/N)!")
