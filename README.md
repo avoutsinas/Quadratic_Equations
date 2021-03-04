@@ -5,4 +5,4 @@ It will also plot the equation as a function!
 # It was created for fun
 Feel free to try this program and if possible sent me some feedback about it!
 
-This is my first real program!
+This was my first program and as a result it is poorly written
