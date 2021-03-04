@@ -117,7 +117,7 @@ while answer == R:
         print(
             "----------------------------------------------------------------"
         )
-      elif D >0 :
+      elif D > 0 :
         x1 = (-b + math.sqrt(D)) / (2 * a)
         x2 = (-b - math.sqrt(D)) / (2 * a)
         print(
@@ -138,7 +138,7 @@ while answer == R:
     #vectorize function
     f = np.vectorize(f)
 
-    #generate values between -10-abs(x2,x1) and 10+abs(x1,x2) depending on the sign of a
+    #generate values between -10-abs(x2,x1) and 10+abs(x1,x2) depending on the sign of a. In case of a primary equation the values are adjusted around x1 only.
     if a > 0:
         x = np.linspace(-10 - abs(x2), 10 + abs(x1))
     elif a==0:
