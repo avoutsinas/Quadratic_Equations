@@ -3,6 +3,6 @@ This program will calculate the roots of any quadratic equation (where roots ε 
 It will also plot the equation as a function!
 
 # It was created for fun
-Feel free to try this program and if possible sent me some feedback about it!
+Feel free to try this program!
 
-This was my first program and as a result it is poorly written
+This was my first program and as a result it was poorly written
